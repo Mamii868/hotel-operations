@@ -42,6 +42,9 @@ public class Reservation {
         } else if (this.roomType.equalsIgnoreCase("double")) {
             price += 124;
         }
+        if (this.isWeekend) {
+            price *= 1.10;
+        }
         return price;
     }
 
