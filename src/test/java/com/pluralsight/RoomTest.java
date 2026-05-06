@@ -36,4 +36,13 @@ class RoomTest {
 
         assertTrue(room.isDirty());
     }
+
+    @Test
+    public void isAvailable_should_returnFalseIfOccupiedOrDirty() {
+        Room room = new Room(2, 125.00, false, false);
+
+        room.checkIn();
+
+        assertFalse(room.isAvailable());
+    }
 }
