@@ -15,6 +15,13 @@ public class Hotel {
         this.bookedBasicRoomes = 0;
     }
 
+    public Hotel(int bookedSuites, int bookedBasicRoomes) {
+        this.numberOfSuites = 0;
+        this.numberOfRooms = 0;
+        this.bookedSuites = bookedSuites;
+        this.bookedBasicRoomes = bookedBasicRoomes;
+    }
+
     public boolean bookRoom(int numberOfRooms, boolean isSuite) {
         if (isSuite) {
             if (this.numberOfSuites - this.bookedSuites >= numberOfRooms) {
